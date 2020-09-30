@@ -8,7 +8,6 @@ const mutationTaskCreator = loader('./gql/mutationTaskCreator.graphql');
 
 export const useTaskCreator = () => {
     const [ _addTask, {error} ] = useMutation(mutationTaskCreator);
-    const history = useHistory();
 
     const createTask = async (task, refetch) => {
         try {
